@@ -38,6 +38,9 @@ int main()
                     limaL = 5;
                     tigaL = tigaL + 3 - limaL;
                 }
+                if (limaL<=5){
+                    tigaL = 0;
+                }
             }
         }
         else if (op == 6){
@@ -57,5 +60,5 @@ int main()
         printf(" Isi air pada teko 3L adalah %d \n", tigaL);
         printf(" Isi air pada teko 5L adalah %d \n \n", limaL);
     }
-    printf("Teko sudah berisi 4 Liter.");
+    printf("Teko sudah berisi 4 Liter. \n");
 }
