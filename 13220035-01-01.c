@@ -38,7 +38,7 @@ int main()
                     limaL = 5;
                     tigaL = tigaL + 3 - limaL;
                 }
-                if (limaL<=5){
+                if (limaL<5){
                     tigaL = 0;
                 }
             }
