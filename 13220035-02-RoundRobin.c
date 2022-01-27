@@ -34,11 +34,6 @@ int main()
                 prog[l]=0;
                 aktif = aktif + 1;
             }
-            if (prog[l]==1){
-                printf("%d      ", ttime -1);
-                printf("*P%d telah selesai diproses.\n", urut[aktif]);
-                prog[l]=2;
-            }
         }
 
         if ((ttime-temp)%100==0||ekse[urut[0]]==0){
@@ -63,8 +58,15 @@ int main()
         }
 
         ekse[urut[0]]=ekse[urut[0]]-1;
+        for (l = 0; l<x ; l++){
+            if (prog[l]==1){
+                printf("%d      ", ttime);
+                printf("P%d telah selesai diproses.\n", l);
+                prog[l]=2;
+            }
+        }
     }
     printf("%d      ", ttime);
-    printf("P%d telah selesai diproses.\n", urut[aktif]);
+    printf("P%d telah selesai diproses.\n", urut[aktif]-1);
     return 0;
 }
