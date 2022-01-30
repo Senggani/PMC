@@ -10,7 +10,6 @@ int main()
     char CC;
     FILE *myfile;
     char test[100];
-    char cek[100];
     int retval, i, x=0;
 
 
@@ -18,21 +17,16 @@ int main()
     scanf("%s", &name);
     myfile = fopen(name, "r");
 
-        retval = fscanf(myfile, "%c", &CC);
+    retval = fscanf(myfile, "%c", &CC);
     while (retval != EOF) {
         if (x<3){
             test[x]=CC;
             x = x + 1;
         }
         retval = fscanf(myfile, "%c", &CC);
-
     }
-
-    for (i=0; i<3; i++){
-        cek[i]=test[i];
-    }
-
-    if (test[0] == 'ÿ' && test[1] == 'Ø' && test[2] == 'ÿ'){
+    
+    if (test[0] == 'Ã¿' && test[1] == 'Ã˜' && test[2] == 'Ã¿'){
         printf("File berupa .jpg\n");
     }
     else if (test[0] == '%' && test[1] == 'P' && test[2] == 'D'){
